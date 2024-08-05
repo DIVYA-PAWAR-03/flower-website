@@ -1,0 +1,481 @@
+:root{
+    /* --divya-color-pink: #fff2f2; */
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     box-sizing: border-box;
+     /* box-shadow: 0 0 0 1px red; for checking if our any element is 
+     overflow or not with the help of this property we can find
+      out that which element is overflow*/   
+}
+body{
+     background-image: url(./images/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+}
+p{
+    font-size: 1.1rem;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+.logo{
+    color: #C41179;
+     padding-left: 1rem; 
+    font-style: italic;
+    animation: logo 6s 1;
+    transform: scale(1,2);
+}
+@keyframes logo {
+from{
+       opacity: 0; 
+    }
+    to{        
+        opacity: 1;  
+    }
+}
+.navbar .nav .items{
+    list-style: none;
+    display: flex;
+    gap: 1.3rem;
+    padding: 1.2rem;
+    
+}
+.nav .items li{
+    font-weight: bold;
+    font-size: 1.6rem;
+    position: relative;
+}
+.nav .items li::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5%;
+    background-color: rgb(94, 4, 112);
+    transition: 250ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.nav .items li:hover::before{
+    transform: scaleX(1);
+}
+
+ .nav .items a{
+    color: #C41179;
+    text-decoration: none;
+   
+ }
+.nav .items a:hover{
+    color: rgb(124, 5, 53);
+    /* text-decoration: underline; */
+    /* text-underline-offset: 4px; */
+    transition: 1s;
+}
+
+.introduction .heading{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(129, 2, 98);
+    cursor: pointer;
+    animation: intro  3s ease-in;
+    /* opacity: 0; */
+    text-transform: uppercase;
+}
+@keyframes intro {
+   from {
+        color: rgb(68, 3, 52);
+        opacity: 0;
+        transform: translateX(-100px) ;
+    }
+    to{
+        color: rgb(68, 3, 52);
+        opacity: 1;
+        transform: translateX(0) ;
+        /* text-decoration: underline; */
+    }
+    
+}
+.introduction .desc {
+    margin: 0 7rem 2rem 7rem;
+    cursor: pointer;
+    color: rgb(121, 4, 68);
+    font-weight: 600;
+    text-align: justify;
+} 
+.gallery .heading{
+    text-align: center;
+    color: rgb(134, 6, 81);
+    padding-bottom: 1.6rem;
+    font-weight: 900;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.gallery .img{
+    border: 1.5px solid purple;
+     box-shadow: 6px 6px 25px purple; 
+     transition: 240ms;
+    /* horizontal offset vertical offset blurness color */
+}
+.img:hover{
+    transform: scale(1.05,1.05);
+}
+.gallery{
+    display: flex;
+      height: 250px;
+      gap: 2rem; 
+      align-items: center; 
+      justify-content: center;    
+}
+.gallery .img2,
+.gallery .img4 , .gallery .img9, .gallery .img11{
+ align-self: flex-end; 
+}
+.heading{
+    text-align: center;
+    margin-top: 4rem;
+    color: rgb(105, 2, 62);
+    padding-bottom: 1.6rem;
+    font-weight: 900;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.information,
+.information2{
+    display: flex;
+    /* padding-left: 2rem; */
+    justify-content: center;
+    gap: 3rem;
+    height: 500px;
+    margin: 2rem;
+
+}
+.information .image .flower ,
+.information2 .image .flower 
+{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    /* opacity: .5; */
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.information .button,
+.information2 .button{
+    padding: 0.6rem;
+    border: 1px solid purple;
+   border-radius: 19px;
+   box-shadow: 3px 3px 20px purple;
+    /* display: flex; */
+   /* justify-content: center;
+   align-items: center; */
+}
+ .button {
+    text-decoration: none;
+    color: #8b0754;
+    font-weight: bold;
+}
+
+.button:hover
+{
+    background-color: rgb(211, 31, 196);
+    color: whitesmoke;
+}
+
+  
+.information .desc,
+.information2 .desc{
+    text-align: justify;
+    width: 350px;
+    cursor: pointer;
+    color: rgb(121, 4, 68);
+    font-weight: 600;
+    text-align: justify;
+}
+.headingIMP{
+    margin: 0 0 1rem 2rem;
+    color: rgb(92, 2, 92);
+    text-transform: uppercase;
+}
+.importance{
+    display: flex;
+    margin: 0 4rem 0 3rem;
+    text-align: justify;
+    cursor: pointer;      
+}
+.importance .sub-heading{
+    color: rgb(92, 2, 92);
+    text-transform: uppercase;
+    /* background-color: #C41179; */
+}
+.importance .description{
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(114, 2, 114);
+}
+.importance .box {
+    border: 1px solid purple;
+     padding: 0.8rem;
+    background-color: rgba(250, 131, 204, 0.247);
+    backdrop-filter: blur(3px);
+    transition: 300ms;
+    position: relative;
+}
+.importance .box::before{
+content: "";
+position: absolute;
+height: 100%;
+width: 100%;
+background-color: rgb(248, 100, 248);
+/* top: 0; */
+inset: 0 0 0 0;
+/* left: 0; */
+transform: scaleY(0);
+transform-origin: top;
+transition: 340ms;
+
+}
+.importance .box:hover{
+       transform: scale(1.03,1.04);
+       transition: 340ms;
+}
+.importance .box:hover::before{
+
+     animation: effect 1s; 
+    
+}
+
+@keyframes effect {
+    0%{
+        transform: scaleY(0);
+    }
+    50%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0);
+    }
+}
+
+.sub-images{
+
+    margin-left: 3rem;
+    border: 1.8px solid purple;
+    border-radius: 15px;
+    cursor: pointer;
+    flex-direction: column;
+} 
+.sub-images:hover{
+    transform: translate(30px);
+    
+}
+.cont{
+    margin: 3rem 5rem;
+    text-align: justify;
+    padding: 1rem;
+    border: 1px solid purple;
+    border-radius: 13px;
+    /* background-image: url(./images/text\ background.jpg */
+    /* ); */
+    background-image: linear-gradient(rgba(202, 44, 110, 0.664),rgba(255, 255, 255, 0.705));
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+}
+.cont .bgImg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 13px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.cont .headingbox{
+    margin-bottom: 1.2rem;
+    color: purple;  
+    text-transform: uppercase; 
+}
+.cont .box{
+    font-weight: 600;
+}
+.projectheading{
+    text-align: center;
+    margin-top: 4rem;
+    color: rgb(105, 2, 62);
+    padding-bottom: 1.6rem;
+    font-weight: 900;
+    font-size: 3rem;
+    text-transform: uppercase;
+} 
+.main--container{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    gap: 2rem;
+
+    
+    
+}
+.main--container .container{
+    /* background-color: rgb(253, 10, 144); */
+    background-image: linear-gradient(rgba(202, 44, 110, 0.664),rgba(245, 121, 121, 0.479));
+    padding: 1rem;
+    border-radius: 12px;
+    width: 300px; 
+           
+}
+
+.main--container .container .daisy{
+    
+    background-image: url(./images/Daisy.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.5px solid rgb(182, 2, 182);
+    color:rgb(248, 242, 242) ;
+    padding: 2rem;
+    text-align: justify;
+    border-radius: 12px;
+    width: 300px; 
+    object-fit: cover;
+}
+
+.main--container .container .daffodil{
+    
+    background-image: url(./images/Daffodil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.5px solid rgb(182, 2, 182);
+    color:rgb(230, 224, 227) ;
+    padding: 2rem;
+    text-align: justify;
+    border-radius: 12px;
+    width: 300px; 
+    object-fit: cover;
+}
+.main--container .container .camellia{
+    
+    background-image: url(./images/Camellia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.5px solid rgb(182, 2, 182);
+    color:rgb(230, 224, 227) ;
+    padding: 2rem;
+    text-align: justify;
+    border-radius: 12px;
+    width: 300px; 
+    object-fit: cover;
+}
+
+.main--container .container .dahlia{
+    
+    background-image: url(./images/Dahlia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.5px solid rgb(182, 2, 182);
+    color:rgb(230, 224, 227) ;
+    padding: 2rem;
+    text-align: justify;
+    border-radius: 12px;
+    width: 300px; 
+    object-fit: cover;
+}
+.about_us{
+    text-align: center;
+    color: rgb(134, 6, 81);
+    padding: 3rem 0 0.8rem 0;
+    font-weight: 900;
+    font-size: 3rem;
+    text-transform: uppercase;
+   
+}
+.main-container{
+    /* display: flex;
+    height: 400px;
+    width: 900px;
+      justify-content: center; 
+    text-align: justify;
+    cursor: pointer; 
+     margin: auto; */
+    width: 900px;
+    margin: auto;
+}
+.main-container .about_box{
+    background-color: rgba(255, 192, 203, 0);
+    border: 1px solid purple; 
+    padding: 3rem;
+    /* padding: 5rem 1rem 0 1rem; */
+     border-radius: 12px; 
+    backdrop-filter: blur(8px);
+   
+} 
+.main-container .about_box .desc{
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(202, 9, 202);
+}
+ /* .photo{
+    margin-top: 3rem;
+    border: 1.8px solid purple;
+    border-radius: 15px;
+    cursor: pointer;  
+}
+.photo:hover{
+     transform: translateX(10px) rotate(10deg);  
+              
+}  */
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 0.8rem 0;
+    gap: 4rem; 
+    color: purple;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+i:hover{
+    transform: scale(1.2,1.2);
+}
+
+
+
+
+
+            
+
+
+
+
+
+
+/* .test{
+    padding: 4rem;
+    font-size: 3rem;
+    background-color: black;
+    color: white;
+}
+.test .box{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+.test .box2{
+    background-color: blue;
+    width: ;
+}
+.test .box1:hover ~ .box2{
+    width: 100px;
+} */
