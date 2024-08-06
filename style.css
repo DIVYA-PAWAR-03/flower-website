@@ -27,7 +27,12 @@ p{
     display: flex;
     justify-content: space-between;
    align-items: center;
+   background-color: rgba(128, 0, 128, 0);
+   backdrop-filter: blur(13px);
+   border-radius: 10px;
 }
+
+
 .logo{
     color: var(--basic-color);
      padding-left: 1rem; 
@@ -48,6 +53,7 @@ from{
     display: flex;
     gap: 1.3rem;
     padding: 1.2rem;
+   
     
 }
 .nav .items li{
@@ -282,7 +288,7 @@ transition: 340ms;
     flex-direction: column;
 } 
 .sub-images:hover{
-    transform: translate(30px);
+    transform: scale(1.03,1.03);
     
 }
 .cont{
@@ -336,7 +342,7 @@ transition: 340ms;
 }
 .main--container .container{
     /* background-color: rgb(253, 10, 144); */
-    background-image: linear-gradient(rgba(202, 44, 110, 0.664),rgba(245, 121, 121, 0.479));
+    background-image: linear-gradient(rgba(192, 7, 121, 0.575),rgba(245, 121, 121, 0.479));
     padding: 1rem;
     border-radius: 12px;
     width: 300px; 
@@ -345,57 +351,62 @@ transition: 340ms;
 
 .main--container .container .daisy{
     
-    background-image: url(./images/Daisy.webp);
+    background: linear-gradient(rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.5)),url(./images/Daisy.webp);
     background-repeat: no-repeat;
     background-size: cover;
     border:var(--border);
-    color:#f8f2f2 ;
-    padding: 2rem;
+    color:var(--text-color) ;
+    padding: 2.1rem;
     text-align: justify;
     border-radius: 12px;
     width: 300px; 
     object-fit: cover;
+    font-weight: 700;
 }
 
 .main--container .container .daffodil{
     
-    background-image: url(./images/Daffodil.jpg);
+   
+    background: linear-gradient(rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.5)),url(./images/Daffodil.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border: var(--border);
-    color:#e6e0e3 ;
+    color:var(--text-color) ;
     padding: 2rem;
     text-align: justify;
     border-radius: 12px;
     width: 300px; 
     object-fit: cover;
+    font-weight: 700;
 }
 .main--container .container .camellia{
     
-    background-image: url(./images/Camellia.jpg);
+    /* background-image: url(./images/Camellia.jpg); */
+    background: linear-gradient(rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.5)),url(./images/Camellia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border: var(--border);
-    color:#e6e0e3 ;
+    color:var(--text-color);
     padding: 2rem;
     text-align: justify;
     border-radius: 12px;
     width: 300px; 
     object-fit: cover;
+    font-weight: 700;
 }
 
 .main--container .container .dahlia{
-    
-    background-image: url(./images/Dahlia.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.5)),url(./images/Dahlia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border:var(--border);
-    color:#e6e0e3 ;
+    color:var(--text-color) ;
     padding: 2rem;
     text-align: justify;
     border-radius: 12px;
     width: 300px; 
     object-fit: cover;
+    font-weight: 700;
 }
 .about_usheading{
     text-align: center;
@@ -426,7 +437,7 @@ transition: 340ms;
 
 
     border: var(--border); 
-    padding: 3rem;
+    padding: 4rem;
     /* padding: 5rem 1rem 0 1rem; */
      border-radius: 12px; 
     backdrop-filter: blur(8px);
@@ -450,11 +461,15 @@ transition: 340ms;
 footer{
     display: flex;
     justify-content: center;
-    margin: 5rem 0 0.8rem 0;
+    margin: 5rem 0 0 0;
     gap: 4rem; 
     color: var(--text-color);
     font-weight: 600;
     font-size: 1.5rem;
+    background-color: rgba(128, 0, 128, 0);
+   backdrop-filter: blur(13px);
+   border-radius: 10px;
+   padding: 1.4rem;
 }
 i:hover{
     transform: scale(1.2,1.2);
