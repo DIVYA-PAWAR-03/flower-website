@@ -1,20 +1,24 @@
 :root{
     /* --divya-color-pink: #fff2f2; */
+    --text-color: #790444;
+    --basic-color:#C41179;
+    --border-color:#800080;
+    --primary-color: #5e0470;
+    --transition-color: #440334;
+    --border:1px solid var(--border-color);
 }
 *{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      box-sizing: border-box;
-     /* box-shadow: 0 0 0 1px red; for checking if our any element is 
-     overflow or not with the help of this property we can find
-      out that which element is overflow*/   
+     /* box-shadow: 0 0 0 1px red; */  
 }
 body{
      background-image: url(./images/Background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-size: cover; 
+     background-attachment: fixed;
 }
 p{
     font-size: 1.1rem;
@@ -25,7 +29,7 @@ p{
    align-items: center;
 }
 .logo{
-    color: #C41179;
+    color: var(--basic-color);
      padding-left: 1rem; 
     font-style: italic;
     animation: logo 6s 1;
@@ -57,7 +61,7 @@ from{
     height: 2px;
     width: 100%;
     bottom: -5%;
-    background-color: rgb(94, 4, 112);
+    background-color:var(--primary-color);
     transition: 250ms;
     transform: scaleX(0);
     transform-origin: left;
@@ -68,12 +72,12 @@ from{
 }
 
  .nav .items a{
-    color: #C41179;
+    color: var(--basic-color);
     text-decoration: none;
    
  }
 .nav .items a:hover{
-    color: rgb(124, 5, 53);
+    color:var(--text-color);
     /* text-decoration: underline; */
     /* text-underline-offset: 4px; */
     transition: 1s;
@@ -84,7 +88,7 @@ from{
     margin-bottom: 2rem;
     text-align: center;
     font-size: 4rem;
-    color: rgb(129, 2, 98);
+    color: var(--text-color);
     cursor: pointer;
     animation: intro  3s ease-in;
     /* opacity: 0; */
@@ -92,12 +96,12 @@ from{
 }
 @keyframes intro {
    from {
-        color: rgb(68, 3, 52);
+        color:var(--transition-color);
         opacity: 0;
         transform: translateX(-100px) ;
     }
     to{
-        color: rgb(68, 3, 52);
+        color:var(--transition-color);
         opacity: 1;
         transform: translateX(0) ;
         /* text-decoration: underline; */
@@ -107,21 +111,21 @@ from{
 .introduction .desc {
     margin: 0 7rem 2rem 7rem;
     cursor: pointer;
-    color: rgb(121, 4, 68);
+    color: var(--text-color);
     font-weight: 600;
     text-align: justify;
 } 
 .gallery .heading{
     text-align: center;
-    color: rgb(134, 6, 81);
+    color: var(--transition-color);
     padding-bottom: 1.6rem;
     font-weight: 900;
     font-size: 3rem;
     text-transform: uppercase;
 }
 .gallery .img{
-    border: 1.5px solid purple;
-     box-shadow: 6px 6px 25px purple; 
+    border: var(--border) ;
+     box-shadow: 6px 6px 25px var(--border-color); 
      transition: 240ms;
     /* horizontal offset vertical offset blurness color */
 }
@@ -142,7 +146,7 @@ from{
 .heading{
     text-align: center;
     margin-top: 4rem;
-    color: rgb(105, 2, 62);
+    color: var(--text-color);
     padding-bottom: 1.6rem;
     font-weight: 900;
     font-size: 3rem;
@@ -175,22 +179,22 @@ from{
 .information .button,
 .information2 .button{
     padding: 0.6rem;
-    border: 1px solid purple;
+    border:var(--border);
    border-radius: 19px;
-   box-shadow: 3px 3px 20px purple;
+   box-shadow: 3px 3px 20px var(--border-color);
     /* display: flex; */
    /* justify-content: center;
    align-items: center; */
 }
  .button {
     text-decoration: none;
-    color: #8b0754;
+    color: var(--text-color);
     font-weight: bold;
 }
 
 .button:hover
 {
-    background-color: rgb(211, 31, 196);
+    background-color: #d31fc4;
     color: whitesmoke;
 }
 
@@ -200,13 +204,13 @@ from{
     text-align: justify;
     width: 350px;
     cursor: pointer;
-    color: rgb(121, 4, 68);
+    color: var(--text-color);
     font-weight: 600;
     text-align: justify;
 }
 .headingIMP{
     margin: 0 0 1rem 2rem;
-    color: rgb(92, 2, 92);
+    color: var(--transition-color);
     text-transform: uppercase;
 }
 .importance{
@@ -216,37 +220,37 @@ from{
     cursor: pointer;      
 }
 .importance .sub-heading{
-    color: rgb(92, 2, 92);
+    color: #5c025c;
     text-transform: uppercase;
     /* background-color: #C41179; */
 }
 .importance .description{
     font-weight: 600;
     font-size: 1rem;
-    color: rgb(114, 2, 114);
+    color: var(--text-color);
 }
 .importance .box {
-    border: 1px solid purple;
+    border: var(--border);
      padding: 0.8rem;
     background-color: rgba(250, 131, 204, 0.247);
     backdrop-filter: blur(3px);
     transition: 300ms;
-    position: relative;
+    /* position: relative; */
 }
-.importance .box::before{
+/* .importance .box::before{
 content: "";
 position: absolute;
 height: 100%;
 width: 100%;
 background-color: rgb(248, 100, 248);
 /* top: 0; */
-inset: 0 0 0 0;
+/* inset: 0 0 0 0; */
 /* left: 0; */
-transform: scaleY(0);
+/* transform: scaleY(0);
 transform-origin: top;
 transition: 340ms;
 
-}
+} */ 
 .importance .box:hover{
        transform: scale(1.03,1.04);
        transition: 340ms;
@@ -272,7 +276,7 @@ transition: 340ms;
 .sub-images{
 
     margin-left: 3rem;
-    border: 1.8px solid purple;
+    border: var(--border);
     border-radius: 15px;
     cursor: pointer;
     flex-direction: column;
@@ -285,7 +289,7 @@ transition: 340ms;
     margin: 3rem 5rem;
     text-align: justify;
     padding: 1rem;
-    border: 1px solid purple;
+    border: var(--border);
     border-radius: 13px;
     /* background-image: url(./images/text\ background.jpg */
     /* ); */
@@ -306,7 +310,7 @@ transition: 340ms;
 }
 .cont .headingbox{
     margin-bottom: 1.2rem;
-    color: purple;  
+    color: var(--transition-color);  
     text-transform: uppercase; 
 }
 .cont .box{
@@ -315,7 +319,7 @@ transition: 340ms;
 .projectheading{
     text-align: center;
     margin-top: 4rem;
-    color: rgb(105, 2, 62);
+    color: var(--transition-color);
     padding-bottom: 1.6rem;
     font-weight: 900;
     font-size: 3rem;
@@ -344,8 +348,8 @@ transition: 340ms;
     background-image: url(./images/Daisy.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    border: 0.5px solid rgb(182, 2, 182);
-    color:rgb(248, 242, 242) ;
+    border:var(--border);
+    color:#f8f2f2 ;
     padding: 2rem;
     text-align: justify;
     border-radius: 12px;
@@ -358,8 +362,8 @@ transition: 340ms;
     background-image: url(./images/Daffodil.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    border: 0.5px solid rgb(182, 2, 182);
-    color:rgb(230, 224, 227) ;
+    border: var(--border);
+    color:#e6e0e3 ;
     padding: 2rem;
     text-align: justify;
     border-radius: 12px;
@@ -371,8 +375,8 @@ transition: 340ms;
     background-image: url(./images/Camellia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    border: 0.5px solid rgb(182, 2, 182);
-    color:rgb(230, 224, 227) ;
+    border: var(--border);
+    color:#e6e0e3 ;
     padding: 2rem;
     text-align: justify;
     border-radius: 12px;
@@ -385,17 +389,17 @@ transition: 340ms;
     background-image: url(./images/Dahlia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    border: 0.5px solid rgb(182, 2, 182);
-    color:rgb(230, 224, 227) ;
+    border:var(--border);
+    color:#e6e0e3 ;
     padding: 2rem;
     text-align: justify;
     border-radius: 12px;
     width: 300px; 
     object-fit: cover;
 }
-.about_us{
+.about_usheading{
     text-align: center;
-    color: rgb(134, 6, 81);
+    color:var(--transition-color) ;
     padding: 3rem 0 0.8rem 0;
     font-weight: 900;
     font-size: 3rem;
@@ -414,8 +418,14 @@ transition: 340ms;
     margin: auto;
 }
 .main-container .about_box{
-    background-color: rgba(255, 192, 203, 0);
-    border: 1px solid purple; 
+    background-color: #ffc0cb00;
+    background-image: url('./images/flower-border-top.png'),url('./images/flower-border\ bottom.png');
+    background-position: 0 0, 100% 100%;
+    background-size: 250px;
+    background-repeat: no-repeat,no-repeat;
+
+
+    border: var(--border); 
     padding: 3rem;
     /* padding: 5rem 1rem 0 1rem; */
      border-radius: 12px; 
@@ -425,7 +435,7 @@ transition: 340ms;
 .main-container .about_box .desc{
     font-weight: 700;
     font-size: 1rem;
-    color: rgb(202, 9, 202);
+    color: var(--text-color);
 }
  /* .photo{
     margin-top: 3rem;
@@ -442,7 +452,7 @@ footer{
     justify-content: center;
     margin: 5rem 0 0.8rem 0;
     gap: 4rem; 
-    color: purple;
+    color: var(--text-color);
     font-weight: 600;
     font-size: 1.5rem;
 }
