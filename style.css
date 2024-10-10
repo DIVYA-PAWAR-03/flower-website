@@ -48,7 +48,7 @@ from{
         opacity: 1;  
     }
 }
-.navbar .nav .items{
+.navbar .items{
     list-style: none;
     display: flex;
     gap: 1.3rem;
@@ -56,12 +56,12 @@ from{
    
     
 }
-.nav .items li{
+ .items li{
     font-weight: bold;
     font-size: 1.6rem;
     position: relative;
 }
-.nav .items li::before{
+.items li::before{
     content: "";
     position: absolute;
     height: 2px;
@@ -73,16 +73,16 @@ from{
     transform-origin: left;
 }
 
-.nav .items li:hover::before{
+.items li:hover::before{
     transform: scaleX(1);
 }
 
- .nav .items a{
+ .items a{
     color: var(--basic-color);
     text-decoration: none;
    
  }
-.nav .items a:hover{
+.items a:hover{
     color:var(--text-color);
     /* text-decoration: underline; */
     /* text-underline-offset: 4px; */
@@ -133,6 +133,7 @@ from{
     border: var(--border) ;
      box-shadow: 6px 6px 25px var(--border-color); 
      transition: 240ms;
+     cursor: pointer;
     /* horizontal offset vertical offset blurness color */
 }
 .img:hover{
@@ -196,6 +197,7 @@ from{
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .button:hover
@@ -342,7 +344,7 @@ transition: 340ms;
 }
 .main--container .container{
     /* background-color: rgb(253, 10, 144); */
-    background-image: linear-gradient(rgba(192, 7, 121, 0.575),rgba(245, 121, 121, 0.479));
+    background-image: linear-gradient(rgba(122, 5, 77, 0.575),rgba(245, 121, 121, 0.479));
     padding: 1rem;
     border-radius: 12px;
     width: 300px; 
@@ -470,6 +472,7 @@ footer{
    backdrop-filter: blur(13px);
    border-radius: 10px;
    padding: 1.4rem;
+  cursor: pointer;
 }
 i:hover{
     transform: scale(1.2,1.2);
